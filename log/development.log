@@ -279,3 +279,115 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 40ms (Views: 4.0ms | ActiveRecord: 12.8ms)
 
 
+Started GET "/users/1" for 127.0.0.1 at 2019-03-06 10:46:00 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/norbert/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+Completed 404 Not Found in 22ms (ActiveRecord: 9.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/users_controller.rb:9:in `show'
+Started GET "/users/" for 127.0.0.1 at 2019-03-06 10:46:03 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-03-06 10:51:04 -0500
+Processing by UsersController#create as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (can't cast ActionController::Parameters):
+  
+app/controllers/users_controller.rb:14:in `create'
+Started GET "/" for 127.0.0.1 at 2019-03-06 10:53:00 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/norbert/.rvm/gems/ruby-2.4.4/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/norbert/.rvm/gems/ruby-2.4.4/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (28.7ms)
+Completed 200 OK in 44ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 10:53:05 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2019-03-06 10:53:07 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-06 10:53:19 -0500
+Processing by UsersController#create as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (can't cast ActionController::Parameters):
+  
+app/controllers/users_controller.rb:14:in `create'
+Started POST "/users" for 127.0.0.1 at 2019-03-06 10:55:55 -0500
+Processing by UsersController#create as */*
+Started GET "/users/" for 127.0.0.1 at 2019-03-06 10:59:40 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/norbert/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 19ms (Views: 8.9ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-06 10:59:59 -0500
+Processing by UsersController#create as */*
+Started POST "/users" for 127.0.0.1 at 2019-03-06 11:04:09 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/norbert/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.6ms)
+
+
+  
+TypeError (can't cast ActionController::Parameters):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for 127.0.0.1 at 2019-03-06 11:04:45 -0500
+Processing by UsersController#create as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (can't cast ActionController::Parameters):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for 127.0.0.1 at 2019-03-06 11:05:19 -0500
+Processing by UsersController#create as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (can't cast ActionController::Parameters):
+  
+app/controllers/users_controller.rb:15:in `create'
+Started POST "/users" for 127.0.0.1 at 2019-03-06 11:06:09 -0500
+Processing by UsersController#create as */*
+Started POST "/users" for 127.0.0.1 at 2019-03-06 11:08:58 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/norbert/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
