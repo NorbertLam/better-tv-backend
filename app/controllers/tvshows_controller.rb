@@ -12,7 +12,12 @@ class TvshowsController < ApplicationController
   end
 
   def create
-    @tvshow = Tvshow.find_or_create_by(tvshow_params)
+    if Tvshow.find_by(tvshow_params)
+      @tvshow = Tvshow.find_by(tvshow_params)
+      @tvshow.update_attribute(:likes, @tvshow.users.count)
+    else
+      @tvshow = Tvshow.create(tvshow_params)
+    end
     render json: @tvshow
   end
 
